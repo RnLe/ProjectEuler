@@ -1,5 +1,6 @@
 import json
 from abc import ABC, abstractmethod
+import time
 
 class Problem:
     def __init__(self, id: int):
@@ -21,4 +22,18 @@ class Problem:
         return metadata
     
     def solve(self, func):
-        return func()
+        # Time the function in ms
+        start = time.time()
+        result = func()
+        end = time.time()
+        
+        if result == int(self.metadata["answer"]):
+            print("Correct answer!")
+        else:
+            print("Incorrect answer!")
+            
+        print("Result: ", result)
+        print("Correct answer: ", self.metadata["answer"])
+        print("Time taken: ", (end-start)*1000, "ms")
+        
+        return result, (end-start)*1000
