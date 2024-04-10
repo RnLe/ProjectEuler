@@ -5,11 +5,19 @@ import sys
 def getNumberFromFilename():
     return int(sys.argv[0].split("/")[-1].split(".")[0])
 
+# Define fibonacci generator
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
 def solve():
-    # Brute force solution
     result = 0
-    for i in range(1000):
-        if i % 3 == 0 or i % 5 == 0:
+    for i in fibonacci():
+        if i >= 4000000:
+            break
+        if i % 2 == 0:
             result += i
     return result
 

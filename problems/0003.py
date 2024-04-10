@@ -5,13 +5,18 @@ import sys
 def getNumberFromFilename():
     return int(sys.argv[0].split("/")[-1].split(".")[0])
 
+def getPrimeFactors(n):
+    factors = []
+    d = 2
+    while n > 1:
+        while n % d == 0:
+            factors.append(d)
+            n /= d
+        d += 1
+    return factors
+
 def solve():
-    # Brute force solution
-    result = 0
-    for i in range(1000):
-        if i % 3 == 0 or i % 5 == 0:
-            result += i
-    return result
+    return getPrimeFactors(600851475143)[-1]
 
 
 task = Problem(getNumberFromFilename())
