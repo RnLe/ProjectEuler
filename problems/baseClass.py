@@ -11,12 +11,12 @@ class Problem:
         with open('../metadata/titlesAndDescriptions.json') as json_file:
             data = json.load(json_file)
             # TODO: Check format of data and check if function can be made more dynamic
-            metadata["title"] = data[str(id)]["title"]
-            metadata["description"] = data[str(id)]["description"]
-            metadata["answer"] = data[str(id)]["answer"]
-            metadata["difficulty"] = data[str(id)]["difficulty"]
-            metadata["solved"] = data[str(id)]["solved"]
-            metadata["time"] = data[str(id)]["time"]
+            metadata["title"]       = data[id-1]["title"]
+            metadata["description"] = data[id-1]["description"]
+            metadata["answer"]      = data[id-1]["answer"]
+            metadata["difficulty"]  = data[id-1]["difficulty"]
+            metadata["solved"]      = data[id-1]["solved"]
+            metadata["time"]        = data[id-1]["time"]
             
         return metadata
     

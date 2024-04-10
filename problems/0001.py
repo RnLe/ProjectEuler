@@ -4,4 +4,4 @@ def solve():
     return 0
 
 task = Problem(1)
-print(task.metadata)
+task.solve(solve)
