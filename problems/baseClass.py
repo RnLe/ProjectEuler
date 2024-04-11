@@ -2,6 +2,17 @@ import json
 from abc import ABC, abstractmethod
 import time
 
+# Example metadata format
+"""{
+    "id": "",
+    "title": "",
+    "description": "",
+    "answer": "",
+    "difficulty": "",
+    "solved": "",
+    "time": ""
+}"""
+
 class Problem:
     def __init__(self, id: int):
         self.id = id
@@ -27,13 +38,16 @@ class Problem:
         result = func()
         end = time.time()
         
+        final_time = (end-start)*1000
+        
         if result == int(self.metadata["answer"]):
             print("Correct answer!")
+            # TODO: Write time to metadata and json file
         else:
             print("Incorrect answer!")
             
         print("Result: ", result)
         print("Correct answer: ", self.metadata["answer"])
-        print("Time taken: ", (end-start)*1000, "ms")
+        print("Time taken: ", final_time, "ms")
         
-        return result, (end-start)*1000
+        return result, final_time
