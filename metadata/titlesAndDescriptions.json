@@ -38,4 +38,28 @@
     "difficulty": "5",
     "solved": "false",
     "time": "None"
+}, {
+    "id": "6",
+    "title": "Sum square difference",
+    "description": "<p>The sum of the squares of the first ten natural numbers is,</p><p>$1^2 + 2^2 + ... + 10^2 = 385$</p><p>The square of the sum of the first ten natural numbers is,</p><p>$(1 + 2 + ... + 10)^2 = 55^2 = 3025$</p><p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is $3025 - 385 = 2640$.</p><p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>",
+    "answer": "25164150",
+    "difficulty": "5",
+    "solved": "false",
+    "time": "None"
+}, {
+    "id": "7",
+    "title": "10001st prime",
+    "description": "<p>By listing the first six prime numbers: $2, 3, 5, 7, 11$, and $13$, we can see that the $6$th prime is $13$.</p><p>What is the $10001$st prime number?</p>",
+    "answer": "104743",
+    "difficulty": "5",
+    "solved": "false",
+    "time": "None"
+}, {
+    "id": "8",
+    "title": "Largest product in a series",
+    "description": "<p>The four adjacent digits in the $1000$-digit number that have the greatest product are $9 \times 9 \times 8 \times 9 = 5832$.</p><p>Find the thirteen adjacent digits in the $1000$-digit number that have the greatest product. What is the value of this product?</p>",
+    "answer": "23514624000",
+    "difficulty": "5",
+    "solved": "false",
+    "time": "None"
 }]
