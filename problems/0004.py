@@ -11,6 +11,5 @@ def solve():
         return str(n) == str(n)[::-1]
     return max([i*j for i in range(100, 1000) for j in range(100, 1000) if isPalindrome(i*j)])
 
-
 task = Problem(getNumberFromFilename())
 task.solve(solve)
