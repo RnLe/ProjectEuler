@@ -1,3 +1,3 @@
 # ProjectEuler
 
-Let's go!
+This is a python implementation of the project euler problems.
